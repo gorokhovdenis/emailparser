@@ -35,12 +35,8 @@ def main():
     links = []
     for link in soup.find_all('a', class_="logo-link"):
         links.append(link.get('href'))
-    #link = soup.find("div", {"class":"div.col-xs-12.col-sm-2.col-lg-3.follow-controls.text-center"}).find("a").get("href")
-    #link = soup.find("a", class_="visit-website").get("href")
-    #for link in soup.find_all('a', attrs={'href': re.compile("^https://")}):
     i=0
     while i < len(links):
-    #    print (links[i])
         getsite(links[i])
         i=i+1
 

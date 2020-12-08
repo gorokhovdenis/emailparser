@@ -2,8 +2,6 @@
 from urllib.request import Request, urlopen
 from bs4 import BeautifulSoup
 import time
-import telebot
-import json
 import re
 url=input('Enter url: ')
 req = Request(url, headers={'User-Agent': 'Mozilla/62.0'})
@@ -17,8 +15,8 @@ match=(re.findall(r'[\w.-]+@[\w.-]+', string))
 i=0
 while i < len(match):
     print (match[i])
-    with open('/home/den/mail/base', 'a') as f:
+    with open('/home/mail/base', 'a') as f:
 	    f.write(match[i]+'\n')
     i=i+1
-with open('/home/den/mail/base', 'a') as f:
+with open('/home/mail/base', 'a') as f:
 	    f.write('--------\n')
